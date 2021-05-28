@@ -1,0 +1,78 @@
+/*Footer*/
+.footer {
+    @include estilosTextos($tipografiaTextos, $medidaTextos, $colorBlanco);
+    background-color: $colorNegro;
+    padding: 3rem 0 3rem 0;
+}
+
+.footer__contenedor {
+    @extend .navegacion__contenedor;
+}
+
+.footer__redesSociales {   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+    list-style: none;
+    padding: 0;
+
+    i{
+        color:$colorBlanco;
+    }
+
+    i:hover {
+        color:$colorPrincipal;
+    }
+}
+
+.volver {
+    position: fixed;
+    right: 1.8rem;
+    bottom: 1.8rem;
+    color: $colorPrincipal;
+    z-index: 99999;
+
+    i {
+        font-size: 2.5rem;
+    }
+
+    i:hover {
+        color: #165354;
+    }
+}
+  
+@media screen and (max-width: 768px){
+    .footer {
+        font-size: $medidaTextosMobile;
+        padding: 2rem 0 1rem 0;
+    }
+
+    .footer .contenedor {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .footer__derechos {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer__redesSociales { 
+        width: 60%;
+        margin-top: .2rem;
+        justify-content: space-around;
+    }
+
+    .volver {
+        position: fixed;
+        right: .7rem;
+        bottom: .7rem;
+
+        i {
+            font-size: 1.5rem;
+        }
+    }
+}
+  

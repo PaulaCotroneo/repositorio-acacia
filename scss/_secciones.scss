@@ -1,0 +1,120 @@
+/*Secciones General*/
+.seccion {
+    background-color: $colorBlanco;
+    padding: 5rem 0 5rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacion {
+    background-color: $colorNegro;
+    width: 50%;
+    padding: 3.7rem;
+    border-bottom: solid 5px $colorPrincipal;
+
+    p {
+    color: $colorBlanco;
+    }
+}
+
+.informacion__titulo {
+    @include estilosTextos($tipografiaTitulos, $medidaTitulos, $colorPrincipal);
+    margin-bottom: 1.25rem;
+}
+
+.informacion__parrafo {
+    font-family: $tipografiaTextos;
+    font-size: $medidaTextos;
+}
+
+.informacion__opciones {
+    @include estilosTextos($tipografiaTextos, $medidaTextos, $colorBlanco);
+    list-style-position: outside;
+    padding-left: 1.25rem;
+}
+
+.informacion__opciones li::marker{
+    color: $colorPrincipal;
+}
+
+.informacion__boton {
+    display: inline-block;
+    margin-top: 1.8rem;
+    padding: .5rem 1rem;
+    border: 1px solid $colorPrincipal;
+
+    a {
+        @include estilosTextos($tipografiaTextos, $medidaTextos, $colorBlanco);
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $colorPrincipal;
+    } 
+}
+
+.informacion__destacado {
+    @include estilosTextos($tipografiaTextos, $medidaTextos, $colorPrincipal);
+    border: 1px solid $colorPrincipal;
+    padding: .5rem 1rem;    
+    margin-left: .5rem;
+}
+
+/*Seccion Galeria*/
+.galeria {
+    background-color: $colorPrincipal;
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+/*Seccion Imagen de Cierre*/
+.imagenFull {
+    margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 768px){
+    .seccion {
+        flex-direction: column;
+        height: 100%;
+        padding: 2rem 0 2rem 0;
+    }
+
+    .informacion {
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+    }
+
+    .galeria {
+        padding: 2rem;
+    }
+
+    .informacion__titulo {
+        font-size: $medidaTitulosMobile;
+        margin-bottom: .5rem;
+    }
+
+    .informacion__parrafo {
+        font-size: $medidaTextosMobile;
+    }
+    
+    .informacion__opciones {
+        font-size: $medidaTextosMobile;
+    }
+
+    .informacion__boton {
+        margin-top: .5rem;
+
+        a {
+            font-size: $medidaTextosMobile;
+        }
+    }
+
+    .informacion__destacado {
+        font-size: $medidaTextosMobile;
+    }
+}

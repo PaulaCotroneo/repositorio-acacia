@@ -1,0 +1,98 @@
+/*Contacto*/
+.contacto {
+    background-color: $colorPrincipal;
+    color: $colorBlanco;
+    height: 60vh;
+    margin: 5rem 0 5rem 0;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: 
+    "texto form";
+}
+
+.escribinos{
+    grid-area: texto;
+    margin: 4rem;
+}
+
+.escribinos__titulo {
+    font-family: $tipografiaTitulos;
+    font-size: $medidaTitulos;
+}
+
+.escribinos__parrafo {
+    font-family: $tipografiaTextos;
+    font-size: $medidaTextos;
+}
+
+.escribinos__mail {
+    @extend .escribinos__parrafo;
+    
+    i {
+    margin-top: 1rem; 
+    padding-right: .6rem;
+    }
+}
+
+.formulario {
+    grid-area: form;
+    font-size: .9rem;
+    margin: 4rem;
+
+    input {
+        width: 100%;
+        height: 2rem;
+        padding: .6rem;
+        margin-bottom: 0.9rem;
+    }
+    
+    textarea {
+        width: 100%;
+        height: 9.3rem;
+        padding: .6rem;
+        margin-bottom: 0.9rem;
+    }
+}
+
+.formulario__botonEnviar{
+    @include estilosTextos($tipografiaTextos, $medidaTextos, $colorBlanco);
+    display: inline-block;
+    width: 100%;
+    border: 1px solid $colorBlanco;
+    background-color: $colorPrincipal;
+}
+
+.formulario__botonEnviar:hover{
+    color: $colorPrincipal;
+    background-color: $colorBlanco;
+}
+
+@media screen and (max-width: 768px){
+    .contacto {
+        height: 100%;
+        margin: 2rem 0 2rem 0;
+        grid-template-rows: 40% 60%;
+        grid-template-areas: 
+        "texto"
+        "form";
+    }
+
+    .escribinos{
+        width: 200%;
+        margin: 2.5rem;
+    }
+
+    .escribinos__titulo {
+        font-size: $medidaTitulosMobile;
+    }
+    
+    .escribinos__parrafo {
+        font-size: $medidaTextosMobile;
+        margin: 0;
+    }
+
+    .formulario {
+        width: 200%;
+        margin: 2.5rem;
+    }
+}

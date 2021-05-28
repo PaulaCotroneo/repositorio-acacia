@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 70rem;
+}
+
+@media screen and (max-width: 768px){
+    .contenedor {
+        width: 80%;
+        max-width: 48rem;
+    }
+}
+
+
+/*Animaciones*/
+figure {
+	width: 100%;
+    height: auto;
+	overflow: hidden;
+}
+
+.galeria__img figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.galeria__img figure:hover img {
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+}
+
+.imagenFull {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.imagenFull:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}

@@ -1,0 +1,85 @@
+/*Seccion Sucursales*/
+.sucursal{
+    background-color: $colorNegro;
+    height: 80vh;
+    margin: 5rem 0 5rem 0;
+    border-bottom: solid 5px $colorPrincipal;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 40vh 20vh 10vh 10vh;
+    grid-template-areas: 
+    "mapa local"
+    "mapa titulo"
+    "mapa direccion"
+    "mapa telefono";
+}
+
+.sucursal__mapa iframe{
+    grid-area: mapa;
+    width: 95%;
+    height: 80vh;
+}
+
+.sucursal__local{
+    grid-area: local;
+    @include estilosTextos($tipografiaTextos, .9rem, $colorPrincipal);
+    font-weight: 700;
+    text-transform: uppercase; 
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+.sucursal__titulo{
+    grid-area: titulo;
+    @include estilosTextos($tipografiaTitulos, $medidaTitulos, $colorPrincipal);
+    width: 70%;
+    padding-left: 1.2rem;
+}
+
+.sucursal__direccion{
+    grid-area: direccion;
+    @include estilosTextos($tipografiaTextos, $medidaTextos, $colorBlanco);
+    width: 90%;
+    padding-left: 1.2rem;
+
+    i{
+        padding-right: .6rem;
+    }
+}
+
+.sucursal__telefono{
+    @extend .sucursal__direccion;
+    grid-area: telefono;
+}
+
+
+@media screen and (max-width: 768px){
+    .sucursal{
+        grid-template-rows: 30vh 20vh 10vh 10vh 10vh;
+        grid-template-areas: 
+        "mapa mapa"
+        "local local"
+        "titulo titulo"
+        "direccion direccion"
+        "telefono telefono";
+    }
+
+    .sucursal__mapa iframe{
+        width: 143%;
+        height: 110%;
+    }
+
+    .sucursal__titulo{
+        width: 100%;
+        font-size: $medidaTitulosMobile;
+    }
+
+    .sucursal__direccion{
+        width: 80%;
+        font-size: $medidaTextosMobile;
+    }
+   
+    .sucursal__telefono{
+        font-size: $medidaTextosMobile;
+    }
+}

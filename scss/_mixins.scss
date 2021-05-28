@@ -1,0 +1,5 @@
+@mixin estilosTextos($tipografiaFuente, $tipografiaMedida, $tipografiaColor){
+    font-family: $tipografiaFuente;
+    font-size: $tipografiaMedida;
+    color: $tipografiaColor;
+}

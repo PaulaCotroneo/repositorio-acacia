@@ -1,0 +1,57 @@
+/*Portadas de las Secciones*/
+.portada{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+$nombresPortadas: bienvenida, nosotros, pasteleria, almuerzos, sucursales;
+
+@each $portadas in $nombresPortadas{
+    .#{$portadas}{
+        background-image: url('../img/#{$portadas}.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+.portada__tituloPrincipal{
+    @include estilosTextos($tipografiaTitulos, 5rem, $colorBlanco);
+    margin: 0 auto;
+    width: 90%;
+    max-width: 70rem;
+    margin-bottom: 2rem;
+}
+
+.portada__tituloPrincipal--color{
+    color: $colorPrincipal;
+}
+
+.portada__titulo {
+    @include estilosTextos($tipografiaTitulos, 4.3rem, $colorBlanco);
+    margin: 0 auto;
+    width: 90%;
+    max-width: 70rem;
+    margin-bottom: 2rem;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
+
+@media screen and (max-width: 768px){
+
+    .portada__tituloPrincipal{
+        font-size: 2.8rem;
+        line-height: 45px;
+        width: 80%;
+        max-width: 48rem;
+    }
+    
+    .portada__titulo {
+        font-size: 2rem;
+        width: 80%;
+        max-width: 48rem;
+    }
+}
