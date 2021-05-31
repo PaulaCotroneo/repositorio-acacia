@@ -13,10 +13,9 @@ img {
   width: 90%;
   max-width: 70rem; }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 990px) {
   .contenedor, .navegacion__contenedor, .footer__contenedor {
-    width: 80%;
-    max-width: 48rem; } }
+    width: 80%; } }
 
 /*Animaciones*/
 figure {
@@ -44,7 +43,6 @@ figure {
   -webkit-filter: grayscale(0);
   filter: grayscale(0); }
 
-/*Header*/
 .navegacion {
   width: 100%;
   height: auto;
@@ -98,7 +96,7 @@ figure {
 .active {
   display: none; }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 990px) {
   .navegacion {
     width: 60%;
     height: 100vh;
@@ -163,7 +161,6 @@ figure {
   .active {
     transform: translateX(0); } }
 
-/*Portadas de las Secciones*/
 .portada {
   width: 100%;
   height: 100vh;
@@ -224,7 +221,16 @@ figure {
   border-bottom-style: solid;
   border-bottom-width: thin; }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 770px) and (max-width: 990px) {
+  .portada__tituloPrincipal {
+    font-size: 4rem;
+    line-height: 64px;
+    width: 80%; }
+  .portada__titulo {
+    font-size: 3rem;
+    width: 80%; } }
+
+@media (max-width: 770px) {
   .portada__tituloPrincipal {
     font-size: 2.8rem;
     line-height: 45px;
@@ -235,7 +241,6 @@ figure {
     width: 80%;
     max-width: 48rem; } }
 
-/*Secciones General*/
 .seccion {
   background-color: #ffffff;
   padding: 5rem 0 5rem 0;
@@ -293,7 +298,6 @@ figure {
   padding: .5rem 1rem;
   margin-left: .5rem; }
 
-/*Seccion Galeria*/
 .galeria {
   background-color: #1e7172;
   padding: 4rem;
@@ -302,11 +306,26 @@ figure {
   align-items: center;
   justify-content: center; }
 
-/*Seccion Imagen de Cierre*/
 .imagenFull {
   margin-bottom: 5rem; }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 770px) and (max-width: 990px) {
+  .seccion {
+    flex-direction: column;
+    height: 100%;
+    padding: 2rem 0 2rem 0; }
+  .informacion {
+    width: 100%;
+    height: 100%;
+    padding: 2rem; }
+  .galeria {
+    padding: 2rem; }
+  .informacion__titulo {
+    margin-bottom: .5rem; }
+  .informacion__boton {
+    margin-top: .5rem; } }
+
+@media (max-width: 770px) {
   .seccion {
     flex-direction: column;
     height: 100%;
@@ -331,21 +350,21 @@ figure {
   .informacion__destacado {
     font-size: 0.9rem; } }
 
-/*Seccion Sucursales*/
 .sucursal {
   background-color: #000000;
-  height: 80vh;
+  position: relative;
   margin: 5rem 0 5rem 0;
   border-bottom: solid 5px #1e7172;
   display: grid;
-  grid-template-columns: 70% 30%;
-  grid-template-rows: 40vh 20vh 10vh 10vh;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 50vh 20vh 20vh 10vh;
   grid-template-areas: "mapa local" "mapa titulo" "mapa direccion" "mapa telefono"; }
 
 .sucursal__mapa iframe {
+  position: absolute;
   grid-area: mapa;
-  width: 95%;
-  height: 80vh; }
+  width: 100%;
+  height: 100%; }
 
 .sucursal__local {
   grid-area: local;
@@ -354,7 +373,7 @@ figure {
   color: #1e7172;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 1.2rem;
+  padding: 0 1.2rem 0 1.2rem;
   margin-top: 1.2rem; }
 
 .sucursal__titulo {
@@ -362,51 +381,61 @@ figure {
   font-family: "Trocchi";
   font-size: 2.5rem;
   color: #1e7172;
-  width: 70%;
-  padding-left: 1.2rem; }
+  width: 100%;
+  padding: 0 1.2rem 0 1.2rem; }
 
 .sucursal__direccion, .sucursal__telefono {
   grid-area: direccion;
   font-family: "Source Sans Pro";
   font-size: 1.25rem;
   color: #ffffff;
-  width: 90%;
-  padding-left: 1.2rem; }
+  width: 100%;
+  padding: 0 1.2rem 0 1.2rem; }
   .sucursal__direccion i, .sucursal__telefono i {
     padding-right: .6rem; }
 
 .sucursal__telefono {
   grid-area: telefono; }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 770px) and (max-width: 990px) {
   .sucursal {
+    margin: 2rem 0 2rem 0;
+    grid-template-columns: 100%;
     grid-template-rows: 30vh 20vh 10vh 10vh 10vh;
-    grid-template-areas: "mapa mapa" "local local" "titulo titulo" "direccion direccion" "telefono telefono"; }
+    grid-template-areas: "mapa" "local" "titulo" "direccion" "telefono"; }
   .sucursal__mapa iframe {
-    width: 143%;
-    height: 110%; }
-  .sucursal__titulo {
     width: 100%;
+    height: 100%; } }
+
+@media (max-width: 770px) {
+  .sucursal {
+    margin: 2rem 0 2rem 0;
+    grid-template-columns: 100%;
+    grid-template-rows: 30vh 20vh 10vh 10vh 10vh;
+    grid-template-areas: "mapa" "local" "titulo" "direccion" "telefono"; }
+  .sucursal__mapa iframe {
+    width: 100%;
+    height: 100%; }
+  .sucursal__titulo {
     font-size: 1.5rem; }
   .sucursal__direccion, .sucursal__telefono {
-    width: 80%;
     font-size: 0.9rem; }
   .sucursal__telefono {
     font-size: 0.9rem; } }
 
-/*Contacto*/
 .contacto {
   background-color: #1e7172;
   color: #ffffff;
-  height: 60vh;
+  height: 100%;
+  align-content: center;
   margin: 5rem 0 5rem 0;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 50% 50%;
   grid-template-areas: "texto form"; }
 
 .escribinos {
   grid-area: texto;
-  margin: 4rem; }
+  margin: 3rem; }
 
 .escribinos__titulo {
   font-family: "Trocchi";
@@ -423,7 +452,7 @@ figure {
 .formulario {
   grid-area: form;
   font-size: .9rem;
-  margin: 4rem; }
+  margin: 3rem; }
   .formulario input {
     width: 100%;
     height: 2rem;
@@ -448,25 +477,36 @@ figure {
   color: #1e7172;
   background-color: #ffffff; }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 770px) and (max-width: 990px) {
   .contacto {
     height: 100%;
     margin: 2rem 0 2rem 0;
-    grid-template-rows: 40% 60%;
+    grid-template-columns: 100%;
+    grid-template-rows: 45% 55%;
     grid-template-areas: "texto" "form"; }
   .escribinos {
-    width: 200%;
-    margin: 2.5rem; }
+    margin: 2rem; }
+  .formulario {
+    margin: 2rem; } }
+
+@media (max-width: 770px) {
+  .contacto {
+    height: 100%;
+    margin: 2rem 0 2rem 0;
+    grid-template-columns: 100%;
+    grid-template-rows: 45% 55%;
+    grid-template-areas: "texto" "form"; }
+  .escribinos {
+    background-color: red;
+    margin: 1.6rem; }
   .escribinos__titulo {
     font-size: 1.5rem; }
   .escribinos__parrafo, .escribinos__mail {
-    font-size: 0.9rem;
-    margin: 0; }
+    font-size: 0.9rem; }
   .formulario {
-    width: 200%;
-    margin: 2.5rem; } }
+    background-color: blue;
+    margin: 1.6rem; } }
 
-/*Footer*/
 .footer {
   font-family: "Source Sans Pro";
   font-size: 1.25rem;
@@ -489,16 +529,36 @@ figure {
 
 .volver {
   position: fixed;
-  right: 1.8rem;
-  bottom: 1.8rem;
+  right: .6rem;
+  bottom: .6rem;
   color: #1e7172;
   z-index: 99999; }
   .volver i {
-    font-size: 2.5rem; }
+    font-size: 2rem; }
   .volver i:hover {
     color: #165354; }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 770px) and (max-width: 990px) {
+  .footer {
+    padding: 2rem 0 1rem 0; }
+  .footer .contenedor, .footer .navegacion__contenedor, .footer .footer__contenedor {
+    flex-direction: column;
+    width: 80%; }
+  .footer__derechos {
+    width: 100%;
+    text-align: center; }
+  .footer__redesSociales {
+    width: 60%;
+    margin-top: .2rem;
+    justify-content: space-around; }
+  .volver {
+    position: fixed;
+    right: .4rem;
+    bottom: .4rem; }
+    .volver i {
+      font-size: 1.5rem; } }
+
+@media (max-width: 770px) {
   .footer {
     font-size: 0.9rem;
     padding: 2rem 0 1rem 0; }
@@ -514,8 +574,8 @@ figure {
     justify-content: space-around; }
   .volver {
     position: fixed;
-    right: .7rem;
-    bottom: .7rem; }
+    right: .4rem;
+    bottom: .4rem; }
     .volver i {
       font-size: 1.5rem; } }
 
@@ -568,20 +628,34 @@ figure {
   .informacion404__boton:hover a {
     color: #1e7172; }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 770px) and (max-width: 990px) {
   .seccion404 {
     flex-direction: column;
     height: 100vh;
     padding: 0; }
   .informacion404 {
     width: 100%;
-    max-width: 48rem;
+    height: 100vh;
+    padding: 2rem; }
+  .informacion404__titulo {
+    margin-bottom: .5rem; }
+  .informacion404__boton {
+    margin-top: .5rem; } }
+
+@media (max-width: 770px) {
+  .seccion404 {
+    flex-direction: column;
+    height: 100vh;
+    padding: 0; }
+  .informacion404 {
+    width: 100%;
     height: 100vh;
     padding: 2rem; }
   .informacion404__titulo {
     font-size: 1.5rem;
     margin-bottom: .5rem; }
   .informacion404__parrafo {
+    text-align: center;
     font-size: 0.9rem; }
   .informacion404__boton {
     margin-top: .5rem; }

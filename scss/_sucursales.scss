@@ -1,12 +1,11 @@
-/*Seccion Sucursales*/
 .sucursal{
     background-color: $colorNegro;
-    height: 80vh;
+    position: relative;
     margin: 5rem 0 5rem 0;
     border-bottom: solid 5px $colorPrincipal;
     display: grid;
-    grid-template-columns: 70% 30%;
-    grid-template-rows: 40vh 20vh 10vh 10vh;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 50vh 20vh 20vh 10vh;
     grid-template-areas: 
     "mapa local"
     "mapa titulo"
@@ -15,9 +14,10 @@
 }
 
 .sucursal__mapa iframe{
+    position: absolute;
     grid-area: mapa;
-    width: 95%;
-    height: 80vh;
+    width: 100%;
+    height: 100%;
 }
 
 .sucursal__local{
@@ -25,22 +25,22 @@
     @include estilosTextos($tipografiaTextos, .9rem, $colorPrincipal);
     font-weight: 700;
     text-transform: uppercase; 
-    padding: 1.2rem;
+    padding: 0 1.2rem 0 1.2rem;
     margin-top: 1.2rem;
 }
 
 .sucursal__titulo{
     grid-area: titulo;
     @include estilosTextos($tipografiaTitulos, $medidaTitulos, $colorPrincipal);
-    width: 70%;
-    padding-left: 1.2rem;
+    width: 100%;
+    padding: 0 1.2rem 0 1.2rem;
 }
 
 .sucursal__direccion{
     grid-area: direccion;
     @include estilosTextos($tipografiaTextos, $medidaTextos, $colorBlanco);
-    width: 90%;
-    padding-left: 1.2rem;
+    width: 100%;
+    padding: 0 1.2rem 0 1.2rem;
 
     i{
         padding-right: .6rem;
@@ -52,30 +52,48 @@
     grid-area: telefono;
 }
 
-
-@media screen and (max-width: 768px){
+@media (min-width: 770px) and (max-width: 990px){
     .sucursal{
+        margin: 2rem 0 2rem 0;
+        grid-template-columns: 100%;
         grid-template-rows: 30vh 20vh 10vh 10vh 10vh;
         grid-template-areas: 
-        "mapa mapa"
-        "local local"
-        "titulo titulo"
-        "direccion direccion"
-        "telefono telefono";
+        "mapa"
+        "local"
+        "titulo"
+        "direccion"
+        "telefono";
     }
 
     .sucursal__mapa iframe{
-        width: 143%;
-        height: 110%;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media(max-width:770px){
+    .sucursal{
+        margin: 2rem 0 2rem 0;
+        grid-template-columns: 100%;
+        grid-template-rows: 30vh 20vh 10vh 10vh 10vh;
+        grid-template-areas: 
+        "mapa"
+        "local"
+        "titulo"
+        "direccion"
+        "telefono";
+    }
+
+    .sucursal__mapa iframe{
+        width: 100%;
+        height: 100%;
     }
 
     .sucursal__titulo{
-        width: 100%;
         font-size: $medidaTitulosMobile;
     }
 
     .sucursal__direccion{
-        width: 80%;
         font-size: $medidaTextosMobile;
     }
    

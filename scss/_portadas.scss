@@ -1,4 +1,3 @@
-/*Portadas de las Secciones*/
 .portada{
     width: 100%;
     height: 100vh;
@@ -40,8 +39,20 @@ $nombresPortadas: bienvenida, nosotros, pasteleria, almuerzos, sucursales;
     border-bottom-width: thin;
 }
 
-@media screen and (max-width: 768px){
+@media (min-width: 770px) and (max-width: 990px){
+    .portada__tituloPrincipal{
+        font-size: 4rem;
+        line-height: 64px;
+        width: 80%;
+    }
+    
+    .portada__titulo {
+        font-size: 3rem;
+        width: 80%;
+    }
+}
 
+@media(max-width:770px){
     .portada__tituloPrincipal{
         font-size: 2.8rem;
         line-height: 45px;

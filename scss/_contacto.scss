@@ -1,18 +1,18 @@
-/*Contacto*/
 .contacto {
     background-color: $colorPrincipal;
     color: $colorBlanco;
-    height: 60vh;
+    height: 100%;
+    align-content: center;
     margin: 5rem 0 5rem 0;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
     grid-template-areas: 
     "texto form";
 }
 
 .escribinos{
     grid-area: texto;
-    margin: 4rem;
+    margin: 3rem;
 }
 
 .escribinos__titulo {
@@ -37,7 +37,7 @@
 .formulario {
     grid-area: form;
     font-size: .9rem;
-    margin: 4rem;
+    margin: 3rem;
 
     input {
         width: 100%;
@@ -67,19 +67,40 @@
     background-color: $colorBlanco;
 }
 
-@media screen and (max-width: 768px){
+@media (min-width: 770px) and (max-width: 990px){
     .contacto {
         height: 100%;
         margin: 2rem 0 2rem 0;
-        grid-template-rows: 40% 60%;
+        grid-template-columns: 100%;
+        grid-template-rows: 45% 55%;
         grid-template-areas: 
         "texto"
         "form";
     }
 
     .escribinos{
-        width: 200%;
-        margin: 2.5rem;
+        margin: 2rem;
+    }
+
+    .formulario {
+        margin: 2rem;
+    }
+}
+
+@media(max-width:770px){
+    .contacto {
+        height: 100%;
+        margin: 2rem 0 2rem 0;
+        grid-template-columns: 100%;
+        grid-template-rows: 45% 55%;
+        grid-template-areas: 
+        "texto"
+        "form";
+    }
+
+    .escribinos{
+        background-color: red;
+        margin: 1.6rem;
     }
 
     .escribinos__titulo {
@@ -88,11 +109,10 @@
     
     .escribinos__parrafo {
         font-size: $medidaTextosMobile;
-        margin: 0;
     }
 
     .formulario {
-        width: 200%;
-        margin: 2.5rem;
+        background-color: blue;
+        margin: 1.6rem;
     }
 }

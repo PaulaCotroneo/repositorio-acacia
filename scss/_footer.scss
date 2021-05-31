@@ -1,4 +1,3 @@
-/*Footer*/
 .footer {
     @include estilosTextos($tipografiaTextos, $medidaTextos, $colorBlanco);
     background-color: $colorNegro;
@@ -29,13 +28,13 @@
 
 .volver {
     position: fixed;
-    right: 1.8rem;
-    bottom: 1.8rem;
+    right: .6rem;
+    bottom: .6rem;
     color: $colorPrincipal;
     z-index: 99999;
 
     i {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     i:hover {
@@ -43,7 +42,39 @@
     }
 }
   
-@media screen and (max-width: 768px){
+@media (min-width: 770px) and (max-width: 990px){
+    .footer {
+        padding: 2rem 0 1rem 0;
+    }
+
+    .footer .contenedor {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .footer__derechos {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer__redesSociales { 
+        width: 60%;
+        margin-top: .2rem;
+        justify-content: space-around;
+    }
+
+    .volver {
+        position: fixed;
+        right: .4rem;
+        bottom: .4rem;
+
+        i {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media(max-width:770px){
     .footer {
         font-size: $medidaTextosMobile;
         padding: 2rem 0 1rem 0;
@@ -67,8 +98,8 @@
 
     .volver {
         position: fixed;
-        right: .7rem;
-        bottom: .7rem;
+        right: .4rem;
+        bottom: .4rem;
 
         i {
             font-size: 1.5rem;
