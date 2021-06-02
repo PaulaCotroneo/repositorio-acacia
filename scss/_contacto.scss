@@ -4,6 +4,7 @@
     height: 100%;
     align-content: center;
     margin: 5rem 0 5rem 0;
+    border-bottom: solid 5px $colorNegro;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: 
@@ -98,8 +99,7 @@
         "form";
     }
 
-    .escribinos{
-        background-color: red;
+    .escribinos {
         margin: 1.6rem;
     }
 
@@ -112,7 +112,6 @@
     }
 
     .formulario {
-        background-color: blue;
         margin: 1.6rem;
     }
 }

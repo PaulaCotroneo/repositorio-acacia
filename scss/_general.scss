@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    max-width: 100%;
+}
+
 img {
     max-width: 100%;
 }
@@ -20,34 +24,3 @@ img {
     }
 }
 
-
-/*Animaciones*/
-figure {
-	width: 100%;
-    height: auto;
-	overflow: hidden;
-}
-
-.galeria__img figure img {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-
-.galeria__img figure:hover img {
-	-webkit-transform: scale(1.15);
-	transform: scale(1.15);
-}
-
-.imagenFull {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-
-.imagenFull:hover {
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);
-}

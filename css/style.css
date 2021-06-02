@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: border-box; }
 
+html {
+  max-width: 100%; }
+
 img {
   max-width: 100%; }
 
@@ -16,32 +19,6 @@ img {
 @media (max-width: 990px) {
   .contenedor, .navegacion__contenedor, .footer__contenedor {
     width: 80%; } }
-
-/*Animaciones*/
-figure {
-  width: 100%;
-  height: auto;
-  overflow: hidden; }
-
-.galeria__img figure img {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out; }
-
-.galeria__img figure:hover img {
-  -webkit-transform: scale(1.15);
-  transform: scale(1.15); }
-
-.imagenFull {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out; }
-
-.imagenFull:hover {
-  -webkit-filter: grayscale(0);
-  filter: grayscale(0); }
 
 .navegacion {
   width: 100%;
@@ -144,7 +121,7 @@ figure {
     transition: opacity .5s, transform .5s;
     transform: translateX(0); }
   .menu-open {
-    width: 100%;
+    width: 0;
     opacity: 1; }
   .navegacion__close {
     display: block;
@@ -309,6 +286,17 @@ figure {
 .imagenFull {
   margin-bottom: 5rem; }
 
+.iconoVolver {
+  position: fixed;
+  right: .6rem;
+  bottom: .6rem;
+  color: #1e7172;
+  z-index: 99999; }
+  .iconoVolver i {
+    font-size: 2rem; }
+  .iconoVolver i:hover {
+    color: #165354; }
+
 @media (min-width: 770px) and (max-width: 990px) {
   .seccion {
     flex-direction: column;
@@ -323,7 +311,13 @@ figure {
   .informacion__titulo {
     margin-bottom: .5rem; }
   .informacion__boton {
-    margin-top: .5rem; } }
+    margin-top: .5rem; }
+  .iconoVolver {
+    position: fixed;
+    right: .4rem;
+    bottom: .4rem; }
+    .iconoVolver i {
+      font-size: 1.5rem; } }
 
 @media (max-width: 770px) {
   .seccion {
@@ -348,7 +342,13 @@ figure {
     .informacion__boton a {
       font-size: 0.9rem; }
   .informacion__destacado {
-    font-size: 0.9rem; } }
+    font-size: 0.9rem; }
+  .iconoVolver {
+    position: fixed;
+    right: .4rem;
+    bottom: .4rem; }
+    .iconoVolver i {
+      font-size: 1.5rem; } }
 
 .sucursal {
   background-color: #000000;
@@ -429,6 +429,7 @@ figure {
   height: 100%;
   align-content: center;
   margin: 5rem 0 5rem 0;
+  border-bottom: solid 5px #000000;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-areas: "texto form"; }
@@ -497,14 +498,12 @@ figure {
     grid-template-rows: 45% 55%;
     grid-template-areas: "texto" "form"; }
   .escribinos {
-    background-color: red;
     margin: 1.6rem; }
   .escribinos__titulo {
     font-size: 1.5rem; }
   .escribinos__parrafo, .escribinos__mail {
     font-size: 0.9rem; }
   .formulario {
-    background-color: blue;
     margin: 1.6rem; } }
 
 .footer {
@@ -527,17 +526,6 @@ figure {
   .footer__redesSociales i:hover {
     color: #1e7172; }
 
-.volver {
-  position: fixed;
-  right: .6rem;
-  bottom: .6rem;
-  color: #1e7172;
-  z-index: 99999; }
-  .volver i {
-    font-size: 2rem; }
-  .volver i:hover {
-    color: #165354; }
-
 @media (min-width: 770px) and (max-width: 990px) {
   .footer {
     padding: 2rem 0 1rem 0; }
@@ -550,13 +538,7 @@ figure {
   .footer__redesSociales {
     width: 60%;
     margin-top: .2rem;
-    justify-content: space-around; }
-  .volver {
-    position: fixed;
-    right: .4rem;
-    bottom: .4rem; }
-    .volver i {
-      font-size: 1.5rem; } }
+    justify-content: space-around; } }
 
 @media (max-width: 770px) {
   .footer {
@@ -571,13 +553,7 @@ figure {
   .footer__redesSociales {
     width: 60%;
     margin-top: .2rem;
-    justify-content: space-around; }
-  .volver {
-    position: fixed;
-    right: .4rem;
-    bottom: .4rem; }
-    .volver i {
-      font-size: 1.5rem; } }
+    justify-content: space-around; } }
 
 .seccion404 {
   background-color: #ffffff;
@@ -661,3 +637,28 @@ figure {
     margin-top: .5rem; }
     .informacion404__boton a {
       font-size: 0.9rem; } }
+
+figure {
+  width: 100%;
+  height: auto;
+  overflow: hidden; }
+
+.galeria__img figure img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out; }
+
+.galeria__img figure:hover img {
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15); }
+
+.imagenFull {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out; }
+
+.imagenFull:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0); }

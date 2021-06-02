@@ -26,22 +26,6 @@
     }
 }
 
-.volver {
-    position: fixed;
-    right: .6rem;
-    bottom: .6rem;
-    color: $colorPrincipal;
-    z-index: 99999;
-
-    i {
-        font-size: 2rem;
-    }
-
-    i:hover {
-        color: #165354;
-    }
-}
-  
 @media (min-width: 770px) and (max-width: 990px){
     .footer {
         padding: 2rem 0 1rem 0;
@@ -61,16 +45,6 @@
         width: 60%;
         margin-top: .2rem;
         justify-content: space-around;
-    }
-
-    .volver {
-        position: fixed;
-        right: .4rem;
-        bottom: .4rem;
-
-        i {
-            font-size: 1.5rem;
-        }
     }
 }
 
@@ -94,16 +68,6 @@
         width: 60%;
         margin-top: .2rem;
         justify-content: space-around;
-    }
-
-    .volver {
-        position: fixed;
-        right: .4rem;
-        bottom: .4rem;
-
-        i {
-            font-size: 1.5rem;
-        }
     }
 }
   

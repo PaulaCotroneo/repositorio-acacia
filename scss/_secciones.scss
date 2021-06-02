@@ -74,6 +74,23 @@
     margin-bottom: 5rem;
 }
 
+
+.iconoVolver {
+    position: fixed;
+    right: .6rem;
+    bottom: .6rem;
+    color: $colorPrincipal;
+    z-index: 99999;
+
+    i {
+        font-size: 2rem;
+    }
+
+    i:hover {
+        color: #165354;
+    }
+}
+
 @media (min-width: 770px) and (max-width: 990px){
     .seccion {
         flex-direction: column;
@@ -97,6 +114,16 @@
 
     .informacion__boton {
         margin-top: .5rem;
+    }
+
+    .iconoVolver {
+        position: fixed;
+        right: .4rem;
+        bottom: .4rem;
+
+        i {
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -140,5 +167,15 @@
 
     .informacion__destacado {
         font-size: $medidaTextosMobile;
+    }
+
+    .iconoVolver {
+        position: fixed;
+        right: .4rem;
+        bottom: .4rem;
+
+        i {
+            font-size: 1.5rem;
+        }
     }
 }
