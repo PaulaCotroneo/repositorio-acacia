@@ -16,13 +16,11 @@
     width: 20%;
     list-style: none;
     padding: 0;
-
     i{
         color:$colorBlanco;
-    }
-
-    i:hover {
-        color:$colorPrincipal;
+        &:hover {
+            color:$colorPrincipal;
+        }
     }
 }
 

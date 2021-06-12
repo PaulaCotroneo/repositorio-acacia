@@ -14,6 +14,7 @@ $nombresPortadas: bienvenida, nosotros, pasteleria, almuerzos, sucursales;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+        background-attachment: fixed,
     }
 }
 
@@ -40,6 +41,10 @@ $nombresPortadas: bienvenida, nosotros, pasteleria, almuerzos, sucursales;
 }
 
 @media (min-width: 770px) and (max-width: 990px){
+    .portada{
+        height: 90vh;
+    }
+
     .portada__tituloPrincipal{
         font-size: 4rem;
         line-height: 64px;
@@ -53,6 +58,10 @@ $nombresPortadas: bienvenida, nosotros, pasteleria, almuerzos, sucursales;
 }
 
 @media(max-width:770px){
+    .portada{
+        height: 80vh;
+    }
+
     .portada__tituloPrincipal{
         font-size: 2.8rem;
         line-height: 45px;

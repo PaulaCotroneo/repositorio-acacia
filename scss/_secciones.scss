@@ -12,7 +12,6 @@
     width: 50%;
     padding: 3.7rem;
     border-bottom: solid 5px $colorPrincipal;
-
     p {
     color: $colorBlanco;
     }
@@ -43,22 +42,26 @@
     margin-top: 1.8rem;
     padding: .5rem 1rem;
     border: 1px solid $colorPrincipal;
-
+    border-radius: $radius;
     a {
-        @include estilosTextos($tipografiaTextos, $medidaTextos, $colorBlanco);
+        @include estilosTextos($tipografiaTextos, $medidaTextos, $colorPrincipal);
         text-decoration: none;
     }
+}
 
-    a:hover {
-        color: $colorPrincipal;
-    } 
+.informacion__boton:hover{
+    background-color: $colorPrincipal;
+    a {
+        color: $colorBlanco;
+    }
 }
 
 .informacion__destacado {
     @include estilosTextos($tipografiaTextos, $medidaTextos, $colorPrincipal);
-    border: 1px solid $colorPrincipal;
-    padding: .5rem 1rem;    
+    border-bottom: 1px solid $colorPrincipal;
+    padding-bottom: .4rem;    
     margin-left: .5rem;
+    text-transform: uppercase; 
 }
 
 .galeria {
@@ -81,13 +84,11 @@
     bottom: .6rem;
     color: $colorPrincipal;
     z-index: 99999;
-
     i {
         font-size: 2rem;
-    }
-
-    i:hover {
-        color: #165354;
+        &:hover {
+            color: #134242;
+        }
     }
 }
 
@@ -120,7 +121,6 @@
         position: fixed;
         right: .4rem;
         bottom: .4rem;
-
         i {
             font-size: 1.5rem;
         }
@@ -159,7 +159,6 @@
 
     .informacion__boton {
         margin-top: .5rem;
-
         a {
             font-size: $medidaTextosMobile;
         }
@@ -173,7 +172,6 @@
         position: fixed;
         right: .4rem;
         bottom: .4rem;
-
         i {
             font-size: 1.5rem;
         }

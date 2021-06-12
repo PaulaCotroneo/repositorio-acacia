@@ -14,8 +14,10 @@
     justify-content: space-between;
 }
 
-.navegacion__logo img{
-    height: 1.5rem;
+.navegacion__logo {
+    img {
+        height: 1.5rem;
+    }
 }
 
 .navegacion__menu {
@@ -24,32 +26,27 @@
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
-
     a{
         @include estilosTextos($tipografiaTextos, $medidaTextos, $colorBlanco);
         padding: 2rem 0 1rem 0;
         display: inline-block;
         text-transform: uppercase; 
         text-decoration: none;
-    }
-    
-    a:hover {
-        color: $colorPrincipal;
-    }
-
+        &:hover {
+            color: $colorPrincipal;
+        }
+    }  
     ul {
         position: absolute;
         display: none;
         list-style: none;
     }
-
     li:hover ul {
         display: block;
         background-color: $colorNegro;
         width: max-content;
         padding: .6rem;
     }
-
     .navegacion__menu--activo {
         color: $colorPrincipal;
     }
@@ -59,7 +56,7 @@
     display: none;
 }
 
-.menu-toggle {
+.menu {
     display: none;
 }
 
@@ -69,12 +66,12 @@
 
 @media(max-width:990px){
     .navegacion {
-        width: 60%;
+        width: 80%;
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        transform: translateX(-40rem);
+        transform: translateX(-50rem);
         transition: transform .5s;
     }
 
@@ -82,24 +79,29 @@
         flex-direction: column;
     }
 
-    .navegacion__logo img {
-        padding-left: 2rem;
+    .navegacion__logo {
+        img {
+        padding-left: 2.2rem;
+        }
     }
 
     .navegacion__menu{
         flex-direction: column;
         text-align: center;
-        justify-content: center;
         margin-right: 0;
     }
 
-    .navegacion__menu a{
+    .navegacion__menu {
+        a {
         text-align: center;
         justify-content: center;
+        }
     }
 
-    .navegacion__menu ul li{
-        display: none;
+    .navegacion__menu {
+        ul li {
+            display: none;
+        }
     }
 
     .barra {
@@ -112,15 +114,17 @@
         bottom: 0;
         cursor: pointer;
         z-index: 1;
-        color: black;
+        color: $colorNegro;
     }
     
-    .barra-home {
-        color: #ffffff;
+    .menu__barra {
+        color: $colorBlanco;
     }
     
-    .navegacion__close i {
-        color: #ffffff;
+    .navegacion__close {
+        i {
+            color: $colorBlanco;
+        }
     }
        
     .overlay {
@@ -151,14 +155,10 @@
         overflow-y: hidden;
     }
        
-    .menu-toggle {
+    .menu {
         display: block;
     }
-    
-    .bars {
-        display: block;
-    }
-    
+
     .active {
         transform: translateX(0);
     }
